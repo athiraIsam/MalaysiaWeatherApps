@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainWeatherActivity"
+    android:weightSum="2"
+    android:orientation="vertical"
+    android:background="@color/colorDarkGrey">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/location_layout"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Location:"
+        android:textSize="20sp"
+        android:textColor="@color/colorWhite"
+        android:id="@+id/text8"
+        >
+    </TextView>
+    <Spinner
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:id="@+id/selectLocation"
+        android:spinnerMode="dropdown"
+        android:layout_toRightOf="@+id/text8"
+        android:backgroundTint="@color/colorLightGrey"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/spinner_location_background"
+        ></Spinner>
+        </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="THURSDAY"
+        android:textColor="@color/colorWhite"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/todayName"
+        android:layout_below="@id/location_layout"
+        ></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="----------------------------------------------------"
+        android:textColor="@color/colorWhite"
+        android:layout_below="@id/todayName"
+        android:gravity="center_horizontal"
+        android:id="@id/text2"
+        ></TextView>
+
+  <RelativeLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/todayName"
+      android:layout_centerInParent="true"
+      android:id="@+id/tempLayout"
+      android:layout_marginTop="20dp">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="24"
+          android:textColor="@color/colorBlue"
+          android:textSize="40sp"
+          android:id="@+id/todayMinTemp"></TextView>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="o"
+          android:textSize="15sp"
+          android:layout_toRightOf="@id/todayMinTemp"
+          android:textColor="@color/colorBlue"
+          android:id="@+id/text3"
+          ></TextView>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_toRightOf="@+id/text3"
+          android:text="c"
+          android:textSize="40sp"
+          android:textColor="@color/colorBlue"
+          android:id="@+id/text7"></TextView>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_toRightOf="@+id/text7"
+          android:text="/"
+          android:textSize="40sp"
+          android:textColor="@color/colorBlue"
+          android:id="@+id/text4"
+          android:layout_marginStart="5dp"
+          android:layout_marginEnd="5dp"></TextView>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="34"
+          android:textColor="@color/colorBlue"
+          android:textSize="40sp"
+          android:layout_toRightOf="@id/text4"
+          android:id="@+id/todayMaxTemp"></TextView>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="o"
+          android:textSize="15sp"
+          android:layout_toRightOf="@id/todayMaxTemp"
+          android:textColor="@color/colorBlue"
+          android:id="@+id/text5"
+          ></TextView>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_toRightOf="@+id/text5"
+          android:text="c"
+          android:textSize="40sp"
+          android:textColor="@color/colorBlue"
+          android:id="@+id/text6"></TextView>
+
+  </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tempLayout"
+        android:weightSum="3"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/colorGrey">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Morning"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:id="@+id/morning"
+                ></TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No Rain"
+                android:textColor="@color/colorBlue"
+                android:layout_toLeftOf="@id/morningImage"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="30sp"
+                android:textSize="20sp"
+                android:id="@+id/morningAttribute"
+                ></TextView>
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:id="@+id/morningImage"
+                ></ImageView>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/colorGrey"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Afternoon"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:id="@+id/afternoon"
+                ></TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No Rain"
+                android:textColor="@color/colorBlue"
+                android:layout_toLeftOf="@id/afternoonImage"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="30sp"
+                android:textSize="20sp"
+                android:id="@+id/afternoonAttribute"
+                ></TextView>
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:id="@+id/afternoonImage"
+                ></ImageView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/colorGrey"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Night"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:id="@+id/night"
+                ></TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No Rain"
+                android:textColor="@color/colorBlue"
+                android:layout_toLeftOf="@id/nightImage"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="30sp"
+                android:textSize="20sp"
+                android:id="@+id/nightAttribute"
+                ></TextView>
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:id="@+id/nightImage"
+                ></ImageView>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
